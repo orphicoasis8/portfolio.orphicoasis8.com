@@ -1,0 +1,1 @@
+This is an exercise in the fabulous world of creating and formating text in Illustrator. Deke McClelland is a thorough instructor and we went over text wrapping, headlines, resolving widows and orphans, and the many uses of the glyphs panel.W
