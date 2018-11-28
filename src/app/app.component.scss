@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css?family=Mali');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono');
+
+.title-bar > hr {
+  height: 50px;
+  color: red;
+  // z-index: 10000;
+  margin-top: 0;
+  border-top-width: 5px;
+  border-top-style: solid;
+  border-top-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 20px 20px -20px #333;
+  // margin: -50px auto 10px;
+}
+
+html,
+body {
+  display: block;
+  /* font-family: sans-serif; */
+  /* font-family: 'Mali', cursive; */
+  font-family: 'Dancing Script', cursive;
+  background: #000;
+  color: #000;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+nav {
+  z-index: 100;
+  font-size: 23vh;
+  /* font-weight: bold; */
+  padding-left: 4%;
+  padding-top: 110px;
+  margin-top: 30px;
+  overflow: hidden;
+  position: fixed;
+}
+
+nav a {
+  display: block;
+  color: rgba(256, 256, 256, 0.1);
+  opacity: 10%;
+
+  /* color: orange; */
+  text-shadow: -4px -4px 8px silver, 4px -4px 8px silver, -4px 4px 8px silver, 4px 4px 8px silver;
+
+  /* text-shadow:
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000; */
+}
+
+nav a {
+  transform: rotateY(-54deg) rotateZ(-8deg);
+
+  transform-origin: 0 40%;
+  transition: all 200ms;
+}
+
+nav a:hover {
+  color: #fff;
+  transform: rotateY(-14deg) rotateZ(0deg);
+  animation-name: nav-glow, nav-spread;
+  animation-duration: 750ms, 500ms;
+  /* animation-delay: 5s; */
+  animation-iteration-count: infinite, 1;
+  animation-direction: alternate, normal;
+  animation-timing-function: ease-in-out, linear;
+  /* letter-spacing: -5px; */
+}
+
+@keyframes nav-spread {
+  0% {
+    letter-spacing: -25px;
+  }
+  /* 33%{letter-spacing: -30px;} */
+  25% {
+  }
+  50% {
+  }
+  /* 66%{letter-spacing: 0px;} */
+  75% {
+  }
+  /* 100%{letter-spacing: -30px;} */
+  /* to {letter-spacing: -15px;} */
+  to {
+    letter-spacing: initial;
+  }
+}
+
+@keyframes nav-glow {
+  0% {
+    text-shadow: -4px -4px 50px rgba(8, 146, 208, 0.6), 4px -4px 50px rgba(8, 146, 208, 0.6),
+      -4px 4px 50px rgba(8, 146, 208, 0.6), 4px 4px 50px rgba(8, 146, 208, 0.6);
+  }
+
+  100% {
+    text-shadow: -4px -4px 100px rgba(8, 146, 208, 0.6), 4px -4px 100px rgba(8, 146, 208, 0.6),
+      -4px 4px 100px rgba(8, 146, 208, 0.6), 4px 4px 100px rgba(8, 146, 208, 0.6);
+  }
+}
+nav a:active {
+  /* color: yellow; */
+}
+
+/* nav a:visited {
+  border: none;
+  color: purple;
+  outline: none;
+  text-decoration: none;
+  -moz-outline-style: none;
+} */
+
+/* Remove the undline from links */
+a {
+  text-decoration: none;
+}
+
+/* Required to remove outline on active link */
+a:active,
+a:focus {
+  /* outline: 0;
+  border: none;
+  -moz-outline-style: none;
+  animation: glow 1s infinite alternate; */
+  text-decoration: none;
+  border: none;
+  outline: 0;
+}
+
+@keyframes glow {
+  from {
+    color: black;
+    text-shadow: -1px -1px 0 orange, 1px -1px 0 orange, -1px 1px 0 orange, 1px 1px 0 orange;
+  }
+
+  to {
+    color: black;
+    text-shadow: -4px -4px 8px yellow, 4px -4px 8px yellow, -4px 4px 8px yellow, 4px 4px 8px yellow;
+  }
+}
+
+.title-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* color: red; */
+  color: black;
+  margin: 10px;
+  font-family: 'Mali', cursive;
+  animation-name: menuglow;
+  animation-duration: 10s;
+  /* animation-delay: 5s; */
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  font-size: 70px;
+  z-index: 100;
+}
+
+@keyframes menuglow {
+  0% {
+    text-shadow: -4px -4px 8px rgba(255, 255, 255, 0.6), 4px -4px 8px rgba(255, 255, 255, 0.6),
+      -4px 4px 8px rgba(255, 255, 255, 0.6), 4px 4px 8px #46464699;
+    /* font-size: 70px; */
+    /* font-weight: 700; */
+    /* z-index: 4; */
+  }
+  /* 10%{font-weight: 600;}
+  20%{font-weight: 500;}
+  30%{font-weight: 400;}
+  40%{font-weight: 300;}
+  50%{font-weight: 200;} */
+  100% {
+    text-shadow: -4px -4px 8px rgba(70, 70, 70, 0.9), 4px -4px 8px rgba(70, 70, 70, 0.9),
+      -4px 4px 8px rgba(70, 70, 70, 0.9), 4px 4px 8px rgba(70, 70, 70, 0.9);
+    /* font-size: 71px; */
+    /* font-weight:100; */
+    /* z-index: 0; */
+  }
+}
+
+body {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-image: radial-gradient(#000000, #0e0e0e, #000000);
+}
+
+.portfolio-vertical {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10vw;
+  color: rgba(256, 0, 0, 0.3);
+  /* z-index: 0; */
+  transform: rotateZ(90deg);
+  position: absolute;
+  top: 0;
+  left: 100%;
+  padding: 0;
+  margin: 0;
+  /* right: -0; */
+  /* right: -20vw; */
+  /* top: 0; */
+  /* left: 0; */
+  /* padding-top:7vw; */
+  overflow: hidden;
+  white-space: nowrap;
+  /* height: 100vh; */
+  max-height: 10vw;
+  min-height: 10vw;
+  /* width: 100vh; */
+  /* display: block; */
+  transform-origin: top left;
+}
+
+.bg-text-container {
+  position: absolute;
+  width: 100vh;
+  height: 100vw;
+  z-index: 0;
+}
+
+.bg-text {
+  transform-origin: top left;
+  position: relative;
+  transform: rotateZ(-15deg);
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 75px;
+  left: -25vw;
+  z-index: 0;
+  color: rgba(10, 256, 10, 0.05);
+  max-width: 200vw;
+  min-width: 200vw;
+  word-wrap: break-word;
+  /* overflow: hidden; */
+  /* max-width: 100vh; */
+  /* white-space: pre-wrap; */
+  /* width: 400px; */
+}

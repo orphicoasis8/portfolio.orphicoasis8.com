@@ -1,0 +1,22 @@
+<!-- <div class="card">
+  <div class="card-header">
+    Factory
+  </div>
+  <img class="card-img-top" src="/assets/illustrator/1Factory guides.svg" alt="Factory">
+  <div class="card-body">
+    <h5 class="card-title"></h5>
+    <p class="card-text">{{articleText}}</p>
+  </div>
+</div> -->
+
+articleSources
+<div *ngFor="let articleSource of articleSources" class="card">
+  <div class="card-header">
+    {{articleSource.title}}
+  </div>
+  <img *ngFor="let imgPath of articleSource.imgPaths" class="card-img-top" src="{{imgPath}}" alt="{{articleSource.title}}">
+  <div class="card-body">
+    <h5 class="card-title"></h5>
+    <p class="card-text">{{articleSource.articleText}}</p>
+  </div>
+</div>

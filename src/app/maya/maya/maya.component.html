@@ -1,0 +1,6 @@
+<!-- <div #threejsoutput (window:resize)="onResize($event)" name="threejsoutput">&nbsp;</div> -->
+
+<div #outputContainer name="outputContainer" (window:resize)="onResize()">&nbsp;
+
+  <iframe [style.width.px]="width" [style.height.px]="height" allowfullscreen="" src="https://www.blend4web.com/apps/webplayer/webplayer.html?load=/assets/tutorials/web_page_integration/apple.json">></iframe>
+</div>
