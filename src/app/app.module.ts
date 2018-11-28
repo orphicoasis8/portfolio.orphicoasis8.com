@@ -9,9 +9,10 @@ import { HeaderModule } from './header/header.module';
 import { IllustratorModule } from './illustrator/illustrator.module';
 import { MayaModule } from './maya/maya.module';
 import { PhotoshopModule } from './photoshop/photoshop.module';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, NotFoundComponent],
   imports: [
     BrowserModule,
     HeaderModule,
